@@ -1,5 +1,5 @@
 resource "aws_instance" "website_server" {
-  ami           = ami-053ef5d7ebe355f4a
+  ami           = "ami-053ef5d7ebe355f4a"
   instance_type = "t3.micro"
   key_name = "chave-site-prd"
   vpc_security_group_ids = [aws_security_group.website_sg.id]
