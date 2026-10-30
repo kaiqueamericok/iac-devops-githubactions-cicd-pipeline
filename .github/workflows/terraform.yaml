@@ -34,7 +34,7 @@ jobs:
         uses: hashicorp/setup-terraform@v4.0.1
 
       - name: Terraform init
-        run: terraform igit anit
+        run: terraform init
 
       - name: Terraform validate 
         run: terraform validate 
@@ -44,4 +44,4 @@ jobs:
 
       - name: Terraform apply
         run: terraform apply -auto-approve tfplan
-        if: github.event.input.apply == "true" 
+        if: ${{ github.event.inputs.apply == 'true' }}
